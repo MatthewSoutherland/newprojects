@@ -1,0 +1,310 @@
+<!doctype html>
+<html>
+    <head>
+        <title>technical data page</title>
+    </head>
+    <style>
+        * {
+            font-size: 1.1rem;
+            box-sizing: border-box;    
+            margin: 0;
+            padding: 1px;
+        }
+
+        @media (max-width: 800px) {
+            * {font-size: 1rem;}
+            body {line-height: 1.4rem;}
+            header {font-size: 1.6rem;}
+            p {font-size: 1rem;}
+            #nav header {font-size: 1.3rem;}
+        }
+
+        body {
+            min-height: 100vh;
+            width: 100%;
+            font-family: 'Times New Roman', Times, serif;
+            background-color: lightgrey;
+            display: grid;
+            grid-template-columns: 1fr 4fr;
+            grid-template-rows: 1rem auto;
+            line-height: 1.5rem;
+        }
+
+        #navbar {
+            position: fixed;
+            display: grid;
+            grid-column: 1;
+            grid-row: 2;
+            place-self: start;
+            border: 1px black solid;
+            padding-top: 0;
+            padding-left: 0;
+        }
+
+        #main-doc {
+            display: grid;
+            grid-column: 2;
+            grid-row: 2;
+            place-self: start;
+        }
+
+        ul {
+            padding-left: 1.2rem;
+        }
+
+        nav li {
+            list-style-type: none;
+            line-height: 2rem;
+        }
+
+        .minor-style {
+            background-color: rgb(230, 230, 50);
+            text-align: center;
+        }
+
+        .major-style {
+            background-color: rgb(255, 255, 0);
+            text-align: center;
+        }
+
+        .main-section {
+            padding-bottom: 3rem;
+        }
+
+        .header {
+            padding-left: 8rem;
+            padding-bottom: 1.6rem;
+            font-size: 1.8rem;
+            font-family: serif;
+        }
+
+        p {
+            font-size: 1.1rem;
+        }
+
+        #nav-header {
+            font-size: 1.4rem;
+            font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+            padding-left: 1rem;
+            padding-right: 1rem;
+            padding-bottom: 2rem;
+        }
+
+        #email {
+            width: 15rem;
+            font-size: 1rem;
+        }
+
+
+    </style>
+    <body>
+        <nav id="navbar">
+            <header id="nav-header">Skip to topic</header>
+            <ul>
+                <li>
+                    <a class="nav-link" href="#Basic-HTML">Basic-HTML</a>
+                </li>
+                <li>
+                    <a class="nav-link" href="#Forms">Forms</a>
+                </li>
+                <li>
+                    <a class="nav-link" href="#Label-and-input">Label-and-input</a>
+                </li>
+                <li>
+                    <a class="nav-link" href="#Radio-buttons">Radio-buttons</a>
+                </li>
+                <li>
+                    <a class="nav-link" href="#Checkboxes">Checkboxes</a>
+                </li>
+                <li>
+                    <a class="nav-link" href="#Submit-button">Submit-buttons</a>
+                </li>
+                <li>
+                    <a class="nav-link" href="#Anchor-tag">Anchor-tag</a>
+                </li>
+                <li>
+                    <a class="nav-link" href="#Internal-links">Internal-links</a>
+                </li>
+                <li>
+                    <a class="nav-link" href="#External-links">External-links</a>
+                </li>
+            </ul>
+        </nav>
+        <main id="main-doc">
+            <section class="main-section" id="Basic-HTML">
+                <header class="header">Basic-HTML</header>
+                <article>
+                    <p>Within this short page im going to cover some of the tags and feature in HTML. The topics covered were some of the topics that i had to go back and relearn as i developed my first websites. Because there is some complications to these elements, i decided to break them down in a technical formatted way.</p><br>
+                    <p>All of these topics will be formatted the same way.</p><br>
+                    <ul>
+                        <li>Header</li>
+                        <li>Brief discription</li>
+                        <li>various option</li>
+                        <li>Appropriate format</li>
+                        <li>Server output</li>
+                    </ul>
+                </article>
+            </section>
+            <section class="main-section" id="Forms">
+                <header class="header">Form element</header>
+                <article>
+                    <p><span class="minor-style">Forms</span> are used to submit data to a server, from user inputs. You can do this by specifyiing an <span class="major-style">action</span> attribute on your <span class="minor-style">form</span> element</p>
+                    <p>The HTML &lt;form&gt; element can contain one or more of the following form elements.</p>
+                    <ul>
+                        <li>&lt;input&gt; -</li>
+                        <li>&lt;label&gt;</li>
+                        <li>&lt;select&gt;</li>
+                        <li>&lt;textarea&gt;</li>
+                        <li>&lt;button&gt;</li>
+                        <li>&lt;fieldset&gt;</li>
+                        <li>&lt;legend&gt;</li>
+                        <li>&lt;datalist&gt;</li>
+                        <li>&lt;output&gt;</li>
+                        <li>&lt;option&gt;</li>
+                        <li>&lt;optgroup&gt;</li>
+                    </ul>
+                    <p><br>&lt;form id="form" action="https://www.freecodecamp.com/email-submit" method="get"&gt;</form></p>
+                    <p>This will send your email to another server.</p>
+                </article>
+            </section>
+            <section class="main-section" id="Label-and-input">
+                <header class="header">Label-and-input</header>
+                <article>
+                    <p>The label tag is used with the input tag. The label <span class="major-style"> for</span> attribute must match the <span class="major-style">id</span> attribute of the input, in order to bind them together.</p>
+                    <p>The &lt;label&gt; tag defines a label for several elements.</p>
+                    <ul>
+                        <li>&lt;input type="checkbox"&gt;</li>
+                        <li>&lt;input type="color"&gt;</li>
+                        <li>&lt;input type="date"&gt;</li>
+                        <li>&lt;input type="datetime-local"&gt;</li>
+                        <li>&lt;input type="email"&gt;</li>
+                        <li>&lt;input type="file"&gt;</li>
+                        <li>&lt;input type="month"&gt;</li>
+                        <li>&lt;input type="number"&gt;</li>
+                        <li>&lt;input type="password"&gt;</li>
+                        <li>&lt;input type="radio"&gt;</li>
+                        <li>&lt;input type="range"&gt;</li>
+                        <li>&lt;input type="search"&gt;</li>
+                        <li>&lt;input type="tel"&gt;</li>
+                        <li>&lt;input type="text"&gt;</li>
+                        <li>&lt;input type="time"&gt;</li>
+                        <li>&lt;input type="url"&gt;</li>
+                        <li>&lt;input type="week"&gt;</li>
+                        <li>&lt;meter&gt;</li>
+                        <li>&lt;progress&gt;</li>
+                        <li>&lt;selector&gt;</li>
+                        <li>&lt;textarea&gt;</li>
+                    </ul>
+                    <p><br>&lt;label for="email" id="email-label"&gt;E-mail&lt;/label&gt;<br>
+                        &lt;input type="email" name="email" 
+                        id="email" placeholder="Enter your e-mail address here" required&gt;</p><br>
+                        <code>
+                        <label for="email" id="email-label">E-mail</label>
+              <input type="email" name="email" 
+              id="email" placeholder="Enter your e-mail address here" required>
+                        </code>
+                </article>
+            </section>
+            <section class="main-section" id="Radio-buttons">
+                <header class="header">Radio-buttons</header>
+                <article>
+                    <p>Radio buttons are used when you want the user to give you one anwser from a multiple choice question.</p>
+                    <p>A radio button is an <span class="major-style">input type</span>.</p>
+                    <p><br>&lt;form action="add link here"&gt;<br>
+                    &lt;label for="male"&gt;Male&lt;/label&gt;<br>
+                    &lt;input type="radio" name="male-female" id="male" value="male"&gt;<br>
+                    &lt;label for="female"&gt;Female&lt;/label&gt;<br>
+                    &lt;input type="radio" name="male-female" id="female" value="female"&gt;<br>
+                    &lt;/form&gt;</p>
+                    <code>
+                        <form action="#">
+                        <label for="male">Male</label>
+                        <input type="radio" name="male-female" id="male" value="male">
+                    <label for="female">Female</label>
+                        <input type="radio" name="male-female" id="female" value="female">
+                    </form>
+                    </code>
+                    <p><br>Note that name="male-female" on both buttons. With the same name you can only select one option.</p>
+                </article>
+            </section>
+            <section class="main-section" id="Checkboxes">
+                <header class="header">Checkboxes</header>
+                <article>
+                    <p>Checkboxes can be used when the user may select more than one option. These will be simular to radio buttons, remember to select more than one option, the name property must be different.</p>
+                    <p>A checkbox is an <span class="major-style">input type</span>.</p>
+                    <p><br>&lt;form action="add link here"&gt;<br>
+                        &lt;label for="python"&gt;Python&lt;/label&gt;<br>
+                        &lt;input type="checkbox" name="python" id="python" value="python"&gt;<br>
+                        &lt;label for="javascript"&gt;Javascript&lt;/label&gt;<br>
+                        &lt;input type="checkbox" name="javascript" id="javascript" value="javascript"&gt;<br>
+                        &lt;label for="visual-basics"&gt;Visual basics&lt;/label&gt;<br>
+                        &lt;input type="checkbox" name="visual-basics" id="visual-basics" value="visual-basics"&gt;<br>
+                        &lt;/form&gt;</p>
+                    <code>
+                        <form action="#">
+                            <label for="python">Python</label>
+                            <input type="checkbox" name="python" id="python" value="python">
+                            <label for="javascript">Javascript</label>
+                            <input type="checkbox" name="javascript" id="javascript" value="javascript">
+                            <label for="visual-basics">Visual basics</label>
+                            <input type="checkbox" name="visual-basics" id="visual-basics" value="visual-basics">
+                        </form>
+                        </code>
+                </article>
+            </section>
+            <section class="main-section" id="Submit-button">
+                <header class="header">Submit-button</header>
+                <article>
+                    <p><span class="major-style">Submit</span> is a <span class="minor-style">type</span> attribute to the button. There are three <span class="minor-style">types</span>: <span class="major-style">Submit, reset, and button</span>. Submit will be the most used. This goes hand in hand with most <span class="minor-style">forms</span> in the fact that information is being asked and needs to be sent some where.</p>
+                    <p>Submit allows the enter key to submit</p>
+                    <p><br>&lt;button type="submit"&gt;BuTTon&lt;/button&gt;</p><br>
+                    <code>
+                        <button type="submit">BuTTon</button>
+                    </code>
+                    <p><br> place this inside your form element.</p>
+                </article>
+            </section>
+            <section class="main-section" id="Anchor-tag">
+                <header class="header">Anchor-tag</header>
+                <article>
+                    <p>The anchor tag in HTML can be defined as a means to create a hyperlink that can link your current page on which the text is being converted to hypertext via &lt;a&gt; <span class="major-style">anchor tag</span> to another page. This anchoring from one page to another is made possible by the attribute <span class="minor-style">href</span>, which can be abbreviated (hypertext reference).
+                    </p><br>
+                    <p>Did you know there is actually several other attributes for the A tag.</p>
+                    <ul>
+                        <li>The <span class="minor-style">href</span> attribute. *The href value is the URL of the linked page.</li>
+                        <li>The <span class="minor-style">title</span> attribute. *The title attribute value appears as a tool tip.</li>
+                        <li>The <span class="minor-style">rel</span> attribute. *It specifies the relationship between the current document and the linked document.</li>
+                        <li>Open the <span class="minor-style">email</span> program. *Open your default email program using the <span class="minor-style">mailto</span> value set to the <span class="minor-style">href</span> property.</li>
+                        <li>Open the <span class="minor-style">phone</span> program. *Open your default phone program using the <span class="minor-style">tel</span> value set to the <span class="minor-style">href</span> property.</li>
+                        <li>Link to a <span class="minor-style">script</span>. *You can link to a script and execute it with a single click.</li>
+                        <li>Link to <span class="minor-style">sections</span>. *You can link to different sections of the same page by linking to elements by id</li>
+                        <li>The <span class="minor-style">download</span> attribute. *Turn a link into a download link.</li>
+                        <li>The <span class="minor-style">ping</span> attribute. *The ping attribute specifies a space seprated list of URLs to ping when the link is clicked.</li>
+                        <li>The <span class="minor-style">type</span> attribute. *The type attribute is used to specify the MIME type of the link target.</li>
+                        <li>The <span class="minor-style">target</span> and <span class="minor-style">rel</span> attribute. *The <span class="minor-style">target</span> attribute specifies were to open the document. The <span class="minor-style">rel</span> attribute specifies the relationship between the current document and the linked document.</li>
+                    </ul>
+                </article>
+            </section>
+            <section class="main-section" id="Internal-links">
+                <header class="header">Internal-links</header>
+                <article>
+                    <p>An internal link will be used to jump to different sections within a page. To create an internal link, you assign a links <span class="major-style">href</span> attribute to a hash symbol <span class="major-style">#</span> plus the value of the <span class="major-style">id</span> attribute for the element that you want to internally link to, usually further down the page. You need to add the same <span class="major-style">id</span> attribute to the element you are linking to.</p>
+                    <p><br>Here is an example of an internal link.</p><br>
+                        <p>
+                        &lt;a class="nav-link" href="#form"&gt;Form field&lt;/a&gt;<br>
+                        &lt;section class="main-section" id="form"&gt;&lt;/section&gt;</p>
+                </article>
+            </section>
+            <section class="main-section" id="External-links">
+                <header class="header">External-links</header>
+                <article>
+                    <p>You can use the &lt;a&gt; tag to link to content outside your page.</p>
+                    <p><br>Here is an example of an external link.</p><br>
+                    <p>&lt;a href="https://www.freecodecamp.org"&gt;&lt;/a&gt;</p>
+                    <code>
+                        <a href="https://www.freecodecamp.org">this links to freecodecamp.org</a>
+                    </code>
+                </article>
+            </section>
+        </main>
+    </body>
